@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../../Media/Pictures/logo.svg';
+import './WebsiteMain.css';
 
-class App extends Component {
+class WebsiteMain extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="WebsiteMain">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -25,4 +25,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default WebsiteMain;
