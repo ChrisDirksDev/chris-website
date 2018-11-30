@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import logo from '../Media/Pictures/logo.svg';
 import './Header.css';
+import TopNavBar from '../TopNavBar/TopNavBar';
 
 class Header extends Component {
   render() {
     return (
-      <div className="Header">
-        <NavBar/>
+      <div className="Header Flex Flex-Content">
+        <TopNavBar/>
       </div>
     );
   }

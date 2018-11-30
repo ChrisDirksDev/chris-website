@@ -1,0 +1,31 @@
+
+.WebsiteMain {
+  flex-flow: column;
+  height: 100%;
+  
+
+}
+
+.Left-Content-Container{
+  height: 100%;
+}
+
+.Flex {
+  display: flex;
+}
+
+.Flex-Content{
+  margin: 0.1em;
+}
+#root{
+  height: 100%;
+}
+
+.Particles{
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  z-index: -1;
+  background: linear-gradient(135deg, rgb(96, 108, 136) 0%, rgb(63, 76, 107) 100%);
+}

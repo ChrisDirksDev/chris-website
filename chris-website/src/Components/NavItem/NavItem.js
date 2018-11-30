@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './NavItem.css';
 
-class NavItem extends Component {
-  render() {
+const NavItem = ({title}) => {
+
     return (
       <div className="NavItem">
-        <NavBar/>
+        <p>{title}</p>
       </div>
     );
-  }
+  
 }
 
 export default NavItem;

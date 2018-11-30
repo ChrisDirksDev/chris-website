@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import WebsiteMain from './Components/WebsiteMain/WebsiteMain';
+import WebsiteMain from './Containers/WebsiteMain';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<WebsiteMain />, document.getElementById('root'));
