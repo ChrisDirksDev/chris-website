@@ -1,5 +1,6 @@
 .Header{
-  border: .1em solid black;
-  flex: 0 1 auto;
+  flex: 1 0 auto;
+  /* border: 0.1em solid black; */
+  background:rgba(32, 32, 32, 1);
 }
   

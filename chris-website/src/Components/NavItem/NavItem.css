@@ -1,10 +1,70 @@
 .NavItem{
-  display: inline;
-  font-size: 1.5em;
+  transition: all 1s;
+  text-align: center;
+  margin: auto 10px;
+  flex: 0 0 auto;
+  width: auto;
+  padding: 15px 0;
+  height: 32px;
 }
 
+.NavItem p{
+  margin: auto 20px;
+  height: 32px;
+  position: relative;
+  padding: 0 10px;
+  font-weight: 800;
+  font-style: normal; 
+  font-variant: normal;
+  line-height: 32px; 
+}
+.NavItem p::before, .NavItem p::after{
+  opacity: 0.5;
+  width: 2px;
+  height: 32px;
+  content: '';
+  flex: 0 1 auto;
+  background: #2980B9;
+  transition: all 0.2s;
+  position: absolute;
+}
+
+.NavItem p:hover:before, .NavItem p:hover:after{
+  opacity: 1;
+  height: 2px;
+  width: 100%;
+}
+
+.NavItem p:hover:before, .NavItem.active p:before{
+  top: -5px;
+}
+
+.NavItem p:hover:after, .NavItem.active p:after{
+  bottom: -5px;
+}
+
+.NavItem p::before{
+  padding-right: 1px;
+  left: 0px;
+  top: 0px;
+}
+
+.NavItem p::after{
+  padding-left: 1px;
+  right: 0px;
+  bottom: 0px;
+}
 .NavItem:hover{
-  color: chartreuse;
   cursor: pointer;
-  
+}
+
+.NavItem.active{
+  color: white;
+}
+
+.NavItem.active > p::before, .NavItem.active > p::after{
+  background: white;
+  opacity: 1;
+  height: 2px;
+  width: 100%;
 }

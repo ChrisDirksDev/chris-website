@@ -3,132 +3,59 @@ import './WebsiteMain.css';
 import Header from '../Components/Header/Header';
 import LeftBar from '../Components/LeftBar/LeftBar';
 import MainContent from '../Components/MainContent/MainContent';
-import Particles from 'react-particles-js';
 
-const pOptions = {
-  "particles": {
-    "number": {
-      "value": 80,
-      "density": {
-        "enable": true,
-        "value_area": 800
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.5,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 6,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": false,
-        "mode": "repulse"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-};
+const activeLink = [
+  'HOME',
+  'PROJECTS',
+  'INTERESTS',
+  'CONTACTME'
+]
+
+const displayedContent = [
+  'HOME',
+  'PROJECTS',
+  'INTERESTS',
+  'CONTACTME'
+]
 
 class WebsiteMain extends Component {
   constructor(){
     super();
     this.state = {
-
+      Link : activeLink[0],
+      leftHideShow : false,
+      prevLink: '',
+      displayedContent: ''
     }
+  }
+
+  onLinkChange = (event, val) =>{
+    let hideshow = false;
+    let aLink = activeLink.find((Link) =>{
+      return Link.toString() === val.value.toString();
+    })
+    if (aLink === undefined) 
+      return
+    if (this.state.Link != aLink && (this.state.Link === 'PROJECTS'|| this.state.Link ==='INTERESTS')&&(aLink.includes('PROJECTS') || aLink.includes('INTERESTS'))) {
+      hideshow = true;
+      this.setState({leftHideShow: true})
+    }
+    
+    this.setState({Link: aLink, leftHideShow:hideshow, prevLink:this.state.Link})
+  }
+
+  onContactClick = (event) => {
+    let mObj = {value: activeLink[3]};
+    this.onLinkChange(null,mObj)
   }
 
   render() {
     return (
       <div className="WebsiteMain Flex">
-      <Particles className="Particles"
-        params={pOptions} />
-          <Header/>
+          <Header onLinkChange = {this.onLinkChange} activeLink = {this.state.Link}/>
           <div className ="Left-Content-Container Flex">
-            <LeftBar/>
-            <MainContent/>
+            <LeftBar leftHideShow={this.state.leftHideShow} activeLink = {this.state.Link} prevLink ={this.state.prevLink}/>
+            <MainContent activeLink = {this.state.Link} onContactClick={this.onContactClick}/>
           </div>
       </div>
     );

@@ -1,19 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './TopNavBar.css';
 import NavItem from '../NavItem/NavItem'
 import logo from './large.jpg'
-class TopNavBar extends Component {
-  render() {
+const TopNavBar = ({onLinkChange, activeLink}) =>  {
+    let test = ("HOME"=== activeLink)? 'active':''
     return (
-      <div className="TopNavBar Flex Flex-Content">
-        <NavItem title='Home'/>
-        <NavItem title='Projects'/>
-        <img className='logo' src={logo} style={{ height: 100, width: 100}}></img>
-        <NavItem title='Interests'/>
-        <NavItem title='Contact Me'/>
+      <div className="TopNavBar flex">
+        <div className="navContainer">
+        <NavItem active={("HOME"=== activeLink)} title='HOME' value='HOME' clickEvent={onLinkChange}/>
+
+        </div>
+        <div className="navContainer">
+        <NavItem active={("PROJECTS"=== activeLink)} title='PROJECTS' value='PROJECTS' clickEvent={onLinkChange}/>
+          
+        </div>
+        <div className="navContainer logo">
+        <img className='logo' src={logo} alt='Logo' style={{ height: 50, width: 50}}></img>
+          
+        </div>
+        <div className="navContainer">
+        <NavItem active={("INTERESTS"=== activeLink) } title='INTERESTS' value='INTERESTS' clickEvent={onLinkChange}/>
+          
+        </div>
+        <div className="navContainer">
+        <NavItem active={("CONTACTME"=== activeLink)} title='CONTACT ME' value='CONTACTME' clickEvent={onLinkChange}/>
+          
+        </div>
       </div>
     );
-  }
 }
+
 
 export default TopNavBar;

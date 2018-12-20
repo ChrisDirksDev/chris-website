@@ -2,30 +2,63 @@
 .WebsiteMain {
   flex-flow: column;
   height: 100%;
-  
-
+  justify-items: flex-start;
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 32pt;
 }
 
 .Left-Content-Container{
   height: 100%;
+  align-items: flex-start;
 }
 
-.Flex {
+.flex {
   display: flex;
 }
 
-.Flex-Content{
-  margin: 0.1em;
-}
-#root{
-  height: 100%;
+.flex-col{
+  flex-direction: column;
 }
 
-.Particles{
-  position: absolute;
+.h2{
+  font-weight: 800;
+  font-size: 34pt;
+}
+
+.color-white{
+  color: white;
+}
+
+.h3{
+  margin-top: 200px;
+}
+
+.h4{
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-size: 60pt;
+}
+
+.sl{
+  font-family: 'Sleeve';
+}
+
+.ms{
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.col-center{
+  align-items: center;
+}
+
+.row-center{
+  justify-content: center;
+}
+
+.row{
   width: 100%;
-  top: 0px;
-  bottom: 0px;
-  z-index: -1;
-  background: linear-gradient(135deg, rgb(96, 108, 136) 0%, rgb(63, 76, 107) 100%);
+}
+
+.flex-start{
+  align-items: flex-start;
 }

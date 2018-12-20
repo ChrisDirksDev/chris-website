@@ -1,0 +1,54 @@
+.HomeContent{
+    transition: all 1s;
+    color: #2980B9;
+    padding: 0 10px;
+    margin: 10px auto;
+    flex-flow: column;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-top:100px;
+}
+.HomeContent > *{
+    margin: auto 10px;
+}
+
+.hotlinks{
+    white-space: pre;
+}
+
+.hotlinks span{
+    text-decoration: underline;
+    color: white;
+}
+
+.contact-link{
+    color: white;
+    margin: 10px;
+    background: #2980B9;
+    padding: 0 10px;
+    transition: all 0.3s;
+}
+.contact-link:hover{
+    color: #2980B9;
+    background: white;
+    cursor: pointer;
+}
+.homeContent span{
+    text-decoration: underline;
+    color: white;
+}
+
+.working-container{
+    align-self: flex-start;
+    margin-left: 10%;
+    font-size: 120pt;
+    font-weight: 400;
+    align-items: center;
+}
+.typedText{
+    margin-left: 25px;
+    color: white;
+    text-decoration: underline;
+}
+

@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './NavItem.css';
 
-const NavItem = ({title}) => {
-
+const NavItem = ({active,title, value,  clickEvent}) => {
     return (
-      <div className="NavItem">
+      <div className={(active===true)? 'active NavItem':'NavItem'} onClick={ (e) => {clickEvent(e,{value})}}>
         <p>{title}</p>
       </div>
     );
-  
 }
 
 export default NavItem;

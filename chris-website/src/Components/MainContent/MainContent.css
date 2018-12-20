@@ -1,4 +1,8 @@
 .MainContent{
-    border: 0.1em solid black;
     width: 100%;
+    transition: all 1s;
+    background-color: rgba(32, 32, 32, 0);
+    margin: 15px;
+    justify-content: center;
 }
+
