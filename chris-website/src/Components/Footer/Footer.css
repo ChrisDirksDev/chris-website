@@ -1,0 +1,26 @@
+.Footer{
+    height: 50px;
+    background-color: rgba(32, 32, 32, 1);
+}
+
+a{
+    color: rgba(41, 127, 185, 1);
+}
+.underLeft{
+    width: 200px;
+    flex: 0 0 auto;
+}
+
+.Footer-Content{
+    border-left: 2px solid rgba(41, 127, 185, 0.5);
+    width: 100%;
+
+}
+
+.Footer-Content > div{
+    margin: auto 15px;
+}
+
+.Footer-Content .links a ~ a{
+    margin-left: 15px;
+}

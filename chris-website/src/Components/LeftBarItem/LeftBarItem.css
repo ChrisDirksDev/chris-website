@@ -1,9 +1,0 @@
-.LeftBarItem{
-  transition: all 1s;
-  -webkit-transition: all 1s;
-  margin-left: 15px;
-  flex: 0 0 auto;
-  width: 250px;
-  color: #2980B9;
-}
-    

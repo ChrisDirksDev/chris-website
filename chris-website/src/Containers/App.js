@@ -6,14 +6,14 @@ import Particles from 'react-particles-js';
 const pOptions = {
   "particles": {
     "number": {
-      "value": 80,
+      "value": 400,
       "density": {
         "enable": true,
         "value_area": 800
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#fff"
     },
     "shape": {
       "type": "circle",
@@ -31,8 +31,8 @@ const pOptions = {
       }
     },
     "opacity": {
-      "value": 0.5,
-      "random": false,
+      "value": 0.05,
+      "random": true,
       "anim": {
         "enable": false,
         "speed": 1,
@@ -41,7 +41,7 @@ const pOptions = {
       }
     },
     "size": {
-      "value": 3,
+      "value": 10,
       "random": true,
       "anim": {
         "enable": false,
@@ -51,16 +51,16 @@ const pOptions = {
       }
     },
     "line_linked": {
-      "enable": true,
-      "distance": 150,
+      "enable": false,
+      "distance": 500,
       "color": "#ffffff",
       "opacity": 0.4,
-      "width": 1
+      "width": 2
     },
     "move": {
       "enable": true,
       "speed": 2,
-      "direction": "none",
+      "direction": "top",
       "random": false,
       "straight": false,
       "out_mode": "out",
@@ -71,43 +71,7 @@ const pOptions = {
         "rotateY": 1200
       }
     }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": false,
-        "mode": "repulse"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
+  }
 };
 
 class App extends Component {
@@ -121,11 +85,10 @@ class App extends Component {
     return (
       <div className="App">
         <div className='part-container'>
-        <Particles className="Particles"
-          params={pOptions} />
-
+          <Particles className="Particles"
+            params={pOptions} />
         </div>
-          <WebsiteMain/>
+        <WebsiteMain/>
       </div>
     );
   }

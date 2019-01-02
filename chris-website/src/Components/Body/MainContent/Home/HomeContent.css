@@ -1,0 +1,46 @@
+.HomeContent{
+    transition: all 1s;
+    color: #2980B9;
+    padding: 0 10px;
+    align-items: center;
+    margin-top:100px;
+}
+
+.hotlinks{
+    white-space: pre;
+}
+
+.hotlinks span{
+    text-decoration: underline;
+    color: white;
+}
+
+.contact-link{
+    color: white;
+    margin: 10px;
+    background: #2980B9;
+    padding: 0 10px;
+    transition: all 0.3s;
+}
+.contact-link:hover{
+    color: #2980B9;
+    background: white;
+    cursor: pointer;
+}
+.homeContent span{
+    text-decoration: underline;
+    color: white;
+}
+
+.working-container{
+    align-self: flex-start;
+    margin-left: 10%;
+    align-items: center;
+    font-size: 10rem;
+}
+.typedText{
+    margin-left: 25px;
+    color: white;
+    text-decoration: underline;
+}
+

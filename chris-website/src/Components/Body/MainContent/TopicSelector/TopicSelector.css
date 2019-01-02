@@ -1,0 +1,33 @@
+
+.TopicSelector{
+    position: relative;
+}
+
+.TopicSelector .row{
+    height: 50%;
+}
+
+.TopicSelector > img{
+    position: absolute;
+    width: 100px;
+    left: calc(50% - 50px);
+    top: calc(50% - 18px);
+    transition: all 0.5s;
+}
+
+.deg0{
+    transform: rotateZ(0deg);
+}
+
+.deg45{
+    transform: rotateZ(45deg);
+}
+.deg135{
+    transform: rotateZ(135deg);
+}
+.deg225{
+    transform: rotateZ(225deg);
+}
+.deg315{
+    transform: rotateZ(315deg);
+}

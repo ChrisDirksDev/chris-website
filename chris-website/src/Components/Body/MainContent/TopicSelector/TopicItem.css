@@ -1,0 +1,27 @@
+.TopicItem{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+    border: 5px outset rgba(25,60,82,1);
+    background-color: rgba(25,60,82,0.5)
+}
+
+.image-container{
+    width: 100%;
+    justify-content: center;
+    padding: 15px;
+}
+.TopicItem:hover{
+    background-color: rgba(32, 23, 23, 0.5);
+    border-color: white;
+    cursor: pointer;
+}
+
+.TopicItem:hover .selectorArrow{
+    transform: rotateZ(90deg)
+}
+.TopicItem span{
+    margin-bottom: 5px;
+}
