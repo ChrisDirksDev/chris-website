@@ -1,0 +1,36 @@
+.writer-container{
+  display: flex;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  margin: 0 auto;
+}
+.typewriter{
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .05em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+    /* Gives that scrolling effect as the typing happens */
+  
+  animation: 
+  typing 3s steps(20, end) infinite,
+  blink-caret .75s step-end infinite;
+}
+
+.typewriter span{
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+
+
+@keyframes typing {
+  0%,100% { width: 0% }
+  25%,75% { width: 100% }
+
+} 
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}

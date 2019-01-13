@@ -1,0 +1,40 @@
+.LeftBarItem{
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  flex: 0 0 auto;
+  position: relative;
+
+}
+
+.LeftBarItem:hover:after{
+  width: 200px;
+}
+
+.LeftBarItem:after{
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  position: absolute;
+  content: "";
+  height: 2px;
+  bottom: -2px;
+  left: 0px;
+  width: 0px;
+  opacity: 1;
+  background: orange;
+}
+
+.LeftBarItem.active > svg{
+  color: orange;
+  
+}
+
+.LeftBarItem.active:after{
+  background: orange;
+  width: 200px;
+}
+
+.LeftBarItem > svg{
+  margin-right: 5px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}

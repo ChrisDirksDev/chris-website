@@ -1,0 +1,30 @@
+.HomeContent{
+    transition: all 1s;
+    color: #2980B9;
+}
+
+.hotlinks{
+    white-space: pre;
+}
+
+.contact-link{
+    background: #2980B9;
+    transition: all 0.3s;
+    
+}
+.contact-link:hover{
+    color: #2980B9;
+    background: white;
+    cursor: pointer;
+}
+
+.working-container{
+    align-self: flex-start;
+    font-size: 10rem;
+}
+.typedText{
+    margin-left: 25px;
+    color: white;
+    text-decoration: underline;
+}
+
