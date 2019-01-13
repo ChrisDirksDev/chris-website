@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Crexfu/chris-website/precache-manifest.b452eea052d2e4f8c3dba5e8034b2c40.js"
+  "/chris-website/precache-manifest.c1aaa3c25dd29c6fcae92ef3a367e07e.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Crexfu/chris-website/index.html", {
+workbox.routing.registerNavigationRoute("/chris-website/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
