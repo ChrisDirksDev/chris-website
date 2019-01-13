@@ -1,9 +1,9 @@
 import React from 'react';
 import './NavItem.css';
 
-const NavItem = ({active,title, value,  clickEvent}) => {
+const NavItem = ({active, title, value, clickEvent}) => {
     return (
-      <div className={(active===true)? 'active NavItem':'NavItem'} onClick={ (e) => {clickEvent(e,{value})}}>
+      <div className={'NavItem pointer' + ((active)? ' active':'')} onClick={ () => {clickEvent(value)}}>
         <span>{title}</span>
       </div>
     );

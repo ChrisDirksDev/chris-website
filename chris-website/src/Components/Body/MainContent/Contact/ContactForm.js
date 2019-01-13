@@ -9,11 +9,11 @@ class ContactForm extends Component {
   constructor(){
     super();
     this.state = {
-      nameDefault: 'Enter your name',
+      nameDefault: 'Your name',
       name:'',
-      emailDefault: 'Enter your email',
+      emailDefault: 'Your email',
       email:'',
-      messageDefault:'Leave a message',
+      messageDefault:'Your message',
       message:''
     }
   }
@@ -30,14 +30,14 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form className="ContactForm flex-col col-center">
+      <form className="ContactForm flex flex-column col-center h-100 mt5">
         <div className='flex row dynamic-row ms'>
-          <TypeText typedText={['Questions?', 'Just Saying hi?', 'Work Together?', 'New Project Idea?']}/>
+          <TypeText typedText={['Questions?', 'Just Saying Hi?', 'Work Together?', 'New Project Idea?']}/>
         </div>
         <div className='flex row row-center form-header'>
-          <span className='sl'>Contact Me</span>
+          <span className='sl sl-big'>Contact Me</span>
         </div>
-        <div className="Flex row col-center input">
+        {/* <div className="flex row col-center input">
           <img src={userIcon}/>
           <input
             className='ms text-input' 
@@ -57,15 +57,16 @@ class ContactForm extends Component {
             placeholder={this.state.emailDefault}
           />
         </div>
-        <div className="Flex row flex-start input">
+        <div className="flex row flex-start input">
           <img src={messageIcon}/>
           <textarea
-            className='ms  text-input'
+            className='ms text-input'
             value={this.state.message}
             onChange={this.messageChange}
             placeholder={this.state.messageDefault}/>
         </div>
-        <input className="sl button" type="submit" value="Send Message" />
+        <button type="submit" value="Submit" className="w5 h4 mt4 shadow-5"><span className="f-subheadline ">Submit</span></button> */}
+        <a onClick="javascript:window.open('mailto:chrisdirks.developer@gmail.com', 'mail');event.preventDefault()" href="mailto:chrisdirks.developer@gmail.com"className="f2 white">chrisdirks.developer@gmail.com</a>
       </form>
     );
   }

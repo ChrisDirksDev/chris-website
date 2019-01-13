@@ -2,34 +2,23 @@ import React from 'react';
 import './LeftBar.css';
 import LeftBarItem from './LeftBarItem/LeftBarItem'
 
-const LeftBar = ({active, activeLink, prev, links, onTopicClick}) => {
+const LeftBar = ({activeCategory, activeTopic, topicData, prevCategory, onTopicClick}) => {
 
-  let getGroup = (value) => {
-    let Group = links.find( groups =>{
-      return groups.value == value;
-    })
+  let defaultPanelStyle = "LeftBar flex flex-column f4 fw4 pt3";
 
-    return (Group!=undefined)? Group:null;
-  }
-  
-
-  let defaultPanelStyle = "LeftBar flex-col";
-
-
-  let activeGroup = getGroup(active);
-  let prevGroup = getGroup(prev);
-
-  let show = (prevGroup != null && activeGroup.links.length > 0 && prevGroup.links.length > 0)? ' slowShow': ' fastShow';
+  let show = (prevCategory != null && activeCategory.links.length > 0 && 
+    prevCategory.links.length > 0)? ' slowShow': ' fastShow';
 
   return(
     <div className ="LeftContainer border-gradient-right-down">
-      { links.map( group =>{
+      { topicData.map( category =>{
         return (
-          <div className={defaultPanelStyle+((group==activeGroup)? show:" hide")}>
-            {group.links.map( link =>{
+          <div className={defaultPanelStyle+((category==activeCategory)? show:" hide")}>
+            {category.links.map( link =>{
               if(link.id > 0){
                 return(
-                  <LeftBarItem title={link.title} active={(activeLink==link.id)? true:false} value={link.id} click={onTopicClick}/>
+                  <LeftBarItem title={link.title} icon={link.icon} active={(activeTopic==link.value)? true:false} 
+                  value={link.value} click={onTopicClick}/>
                 )
               }
             })}

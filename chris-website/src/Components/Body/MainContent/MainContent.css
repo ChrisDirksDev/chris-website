@@ -2,10 +2,25 @@
     width: 100%;
     height: 100%;
     transition: all 1s;
-    background-color: rgba(32, 32, 32, 0);
     justify-content: center;
 }
 
 .Policy{
     overflow: scroll;
+    
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+.interestDouble-top{
+    /* background: rgba(32, 32, 32, 0.5) */
+    color: white;
+}
+
+
+.interestDouble-bottom{
+    /* background: rgb(231, 148, 54); */
+    color: white;
+    
 }

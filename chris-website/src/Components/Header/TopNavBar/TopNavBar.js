@@ -2,25 +2,20 @@ import React from 'react';
 import './TopNavBar.css';
 import NavItem from './NavItem/NavItem'
 
-const TopNavBar = ({onLinkChange, activeLink}) =>  {
-    let test = ("HOME"=== activeLink)? 'active':''
+const TopNavBar = ({changeCategory, category}) =>  {
     return (
       <div className="TopNavBar flex sl row-center border-gradient-bottem-right">
         <div className="navContainer">
-        <NavItem active={("HOME"=== activeLink)} title='HOME' value='HOME' clickEvent={onLinkChange}/>
-
+          <NavItem active={("HOME"=== category)} title='HOME' value='HOME' clickEvent={changeCategory}/>
         </div>
         <div className="navContainer">
-        <NavItem active={("PROJECTS"=== activeLink)} title='PROJECTS' value='PROJECTS' clickEvent={onLinkChange}/>
-          
+          <NavItem active={("PROJECTS"=== category)} title='PROJECTS' value='PROJECTS' clickEvent={changeCategory}/>
         </div>
         <div className="navContainer">
-        <NavItem active={("INTERESTS"=== activeLink) } title='INTERESTS' value='INTERESTS' clickEvent={onLinkChange}/>
-          
+          <NavItem active={("INTERESTS"=== category) } title='INTERESTS' value='INTERESTS' clickEvent={changeCategory}/>
         </div>
         <div className="navContainer">
-        <NavItem active={("CONTACTME"=== activeLink)} title='CONTACT ME' value='CONTACTME' clickEvent={onLinkChange}/>
-          
+          <NavItem active={("CONTACTME"=== category)} title='CONTACT ME' value='CONTACTME' clickEvent={changeCategory}/>
         </div>
       </div>
     );

@@ -1,7 +1,3 @@
-.Header{
-  flex: 1 0 auto;
-
-}
   
 .logobox{
   width: 200px;
@@ -9,18 +5,20 @@
   flex: 0 0 auto;
   display: flex;
   background: rgba(32,32,32,1);
-  position: relative;
   z-index: 1;
 }
 
-.logobox > img{
+.Header{
+  flex: 0 0 auto;
+}
+.logobox  .logo{
   margin: auto;
   perspective: 1200px;
   transform-style: preserve-3d;
 
 }
 
-.logobox:hover > img{
+.logobox:hover .logo{
   animation-name: spinner;
   animation-timing-function: linear;
   animation-iteration-count: infinite;

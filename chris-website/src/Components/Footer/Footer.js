@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = ({policyClick}) => {
     return (
@@ -11,12 +12,15 @@ const Footer = ({policyClick}) => {
             <div className="copyright">
                 <span>Copyright &copy; {(new Date()).getFullYear().toString()} Chris Dirks</span>
                 <span> | </span>
-                <span className="underline pointer" onClick={() => policyClick()}>Privacy Policy</span>
+                <span className="policy-link underline pointer" onClick={() => policyClick('POLICY')}>Privacy Policy</span>
             </div>
             <div className="links">
-                <a href="https://github.com/Crexfu">Github</a>
-                <a href="https://twitter.com/allthebundts?lang=en">Twitter</a>
-                <a href="https://www.linkedin.com/in/chris-dirks/">Linkedin</a>
+                <a className="mr3 " href="https://github.com/Crexfu">
+                <FontAwesomeIcon icon={['fab',"github"]}/> Github</a>
+                <a className="mr3 " href="https://twitter.com/allthebundts?lang=en">
+                <FontAwesomeIcon icon={['fab',"twitter"]}/>Twitter</a>
+                <a className="mr3 " href="https://www.linkedin.com/in/chris-dirks/">
+                <FontAwesomeIcon icon={['fab','linkedin-in']}/>Linkedin</a>
             </div>
         </div>
       </div>

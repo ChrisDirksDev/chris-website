@@ -1,14 +1,71 @@
 .InterestCard{
-    width: 65%;
-    color: #2980B9;
+    /* background-color: rgba(32, 32, 32, 1); */
+    background-color: rgba(25,60,82,0.5);
+    border: 3px solid rgba(25,60,82,1);
+    overflow: hidden;
 }
-
+.InterestCard-Title{
+    letter-spacing: 6px;
+}
 .InterestCard img{
-    float: left;
-    width: 600px;
-    height: 400px;
     /* padding-right: 5px; */
     /* padding-bottom: 5px;
     border-right: 2px solid #2980B9;
     border-bottom: 2px solid #2980B9; */
+}
+
+.InterestCard a{
+    height: 150px;
+}
+
+.InterestCard-container{
+position: relative;
+
+}
+.InterestCard-row1{
+    position: relative;
+    z-index: 2;
+    color: rgba(25,60,82,1);
+}
+
+.InterestCard-row2{
+}
+
+.InterestCard-row2-frame{
+    position: absolute;
+    left: 0;
+    top: -120px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    transform: scaleX(-1);
+}
+.InterestCard-row2-title{
+    z-index: 1;
+    background-color: rgba(32, 32, 32, 1);
+    padding-left: 2000px;
+    padding-right: 150px;
+    position: absolute;
+    left:-1950px;
+    margin: 0;
+}
+
+.InterestCard-row2-title.reverse{
+    z-index: 1;
+    background-color: rgba(32, 32, 32, 1);
+    padding-right: 2000px;
+    padding-left: 150px;
+    position: absolute;
+    left: auto;
+    right:-1950px;
+    
+}
+
+.InterestCard-row2-content{
+    z-index: 1;
+}
+
+.InterestCard-row2-content.reverse{
+    z-index: 1;
+    text-align: right;
 }

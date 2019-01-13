@@ -1,6 +1,60 @@
 .ProjectCard{
-    align-self: flex-start;
-    background-color: rgba(100, 100, 100, 0.15);
-    padding:15px 15px;
-    margin-top: 15px;
+    /* background-color: rgba(32, 32, 32, 1); */
+    background-color: rgba(25,60,82,0.5);
+    border: 3px solid rgba(25,60,82,1);
+    overflow: hidden;
+    width: 100%;
+}
+
+.ProjectCard-Title{
+    letter-spacing: 6px;
+}
+.ProjectCard img{
+    float: left;
+    /* padding-right: 5px; */
+    /* padding-bottom: 5px;
+    border-right: 2px solid #2980B9;
+    border-bottom: 2px solid #2980B9; */
+    background-color: rgba(25,60,82,1);
+    border: 3px solid black;
+    padding: 15px;
+}
+
+
+.ProjectCard-container{
+top: 5%;
+position: relative;
+width: 100%;
+}
+.ProjectCard-row1{
+    position: relative;
+    z-index: 2;
+    color: rgba(25,60,82,1);
+    flex: 0 2 auto;
+}
+
+.ProjectCard-row2{
+    flex: 0  2 auto;
+}
+
+.ProjectCard-row2-frame{
+    position: absolute;
+    left: 0;
+    top: -120px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    transform: scaleX(-1);
+}
+.ProjectCard-row2-title{
+    z-index: 1;
+    background-color: rgba(32, 32, 32, 1);
+    padding-left: 2000px;
+    padding-right: 150px;
+    position: absolute;
+    left:-1950px;
+}
+
+.ProjectCard-row2-content{
+    z-index: 1;
 }
