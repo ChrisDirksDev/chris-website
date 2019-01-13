@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Crexfu/chris-website/precache-manifest.e45a6169d63ff069b481a3e82ac11fab.js"
+  "/Crexfu/chris-website/precache-manifest.b452eea052d2e4f8c3dba5e8034b2c40.js"
 );
 
 workbox.clientsClaim();
