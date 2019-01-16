@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/chris-website/precache-manifest.c1aaa3c25dd29c6fcae92ef3a367e07e.js"
+  "www.chrisdirks.com/precache-manifest.d88019a624b2625c3e4019a2b9cd4eab.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/chris-website/index.html", {
+workbox.routing.registerNavigationRoute("www.chrisdirks.com/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
