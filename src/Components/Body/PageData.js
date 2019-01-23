@@ -1,18 +1,13 @@
-import DiscordImage from './MainContent/robot.svg'
-import EarlyWorkImage from './MainContent/earlywork.svg'
-import GameImage from './MainContent/gameengine.svg'
-import WebsiteImage from './MainContent/website.svg'
+import DiscordImage from './MainContent/Media/robot.svg'
+import EarlyWorkImage from './MainContent/Media/earlywork.svg'
+import GameImage from './MainContent/Media/gameengine.svg'
+import WebsiteImage from './MainContent/Media/website.svg'
 
-import Pets from './MainContent/pets.svg'
-import Development from './MainContent/development.svg'
-import Games from './MainContent/space-invaders.svg'
-import Animes from './MainContent/studio-ghibli.svg'
-
-import Pet1 from './MainContent/Interests/frame-pets.png'
-import Pet2 from './MainContent/Interests/frame-pets2.png'
-import Dev from './MainContent/Interests/frame-development.png'
-import Game from './MainContent/Interests/frame-games.png'
-import Anime from './MainContent/Interests/frame-anime.png'
+import Pet1 from './MainContent/Media/frame-pets.png'
+import Pet2 from './MainContent/Media/frame-pets2.png'
+import Dev from './MainContent/Media/frame-development.png'
+import Game from './MainContent/Media/frame-games.png'
+import Anime from './MainContent/Media/frame-anime.png'
 
 const TopicData = [
     {
