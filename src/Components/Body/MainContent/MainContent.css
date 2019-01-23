@@ -5,14 +5,7 @@
     justify-content: center;
 }
 
-.Policy{
-    overflow: scroll;
-    
-}
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
-}
+
 .interestDouble-top{
     /* background: rgba(32, 32, 32, 0.5) */
     color: white;

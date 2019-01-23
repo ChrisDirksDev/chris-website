@@ -5,6 +5,7 @@
 
 .hotlinks{
     white-space: pre;
+    overflow-wrap: break-word;
 }
 
 .contact-link{

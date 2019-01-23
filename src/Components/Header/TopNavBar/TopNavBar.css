@@ -1,7 +1,7 @@
 .TopNavBar{
   justify-content: center;
+  align-items: center;
   flex: 0 1 auto;
-  width: 100%;
   align-items: flex-start;
   height: 90px;
   font-size: 50pt;
@@ -9,6 +9,7 @@
   /* border-bottom: 3px outset #2980B9; */
   background: rgba(32,32,32,1);
   position: relative;
+  width: 100%;
 }
 
 .navContainer.logo{
@@ -17,11 +18,46 @@
   width: 100px;
 }
 
+.RightNavGroup,.LeftNavGroup{
+  justify-content: space-around;
+}
+
 .navContainer{
-  width: 350px;
   height: 80px;
-  margin: auto 10px;
   flex: 0 1 auto;
   display: flex;
+  margin: auto 30px;
   justify-content: center;
 }
+
+ @media only screen and (max-width: 1400px){
+  .navContainer{
+    font-size: 30pt;
+    margin: auto 10px;
+  }
+
+  .RightNavGroup{
+    justify-content: flex-start;
+  }
+  .LeftNavGroup{
+    justify-content: flex-end;
+  }
+}
+/*
+@media only screen and (max-width: 1000px){
+  .navContainer{
+    width: auto;
+  }
+} */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  /* Styles */
+  
+  }
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  /* Styles */
+  
+  }

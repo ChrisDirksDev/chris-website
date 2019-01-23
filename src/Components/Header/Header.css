@@ -3,7 +3,6 @@
   width: 200px;
   height: 90px;
   flex: 0 0 auto;
-  display: flex;
   background: rgba(32,32,32,1);
   z-index: 1;
 }
