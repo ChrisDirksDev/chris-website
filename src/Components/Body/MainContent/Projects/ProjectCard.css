@@ -4,6 +4,8 @@
     border: 3px solid rgba(25,60,82,1);
     overflow: hidden;
     width: 100%;
+    font-size: 2rem;
+
 }
 
 .ProjectCard-Title{
@@ -22,9 +24,9 @@
 
 
 .ProjectCard-container{
-top: 5%;
 position: relative;
 width: 100%;
+overflow: auto
 }
 .ProjectCard-row1{
     position: relative;
@@ -34,7 +36,6 @@ width: 100%;
 }
 
 .ProjectCard-row2{
-    flex: 0  2 auto;
 }
 
 .ProjectCard-row2-frame{
@@ -50,11 +51,14 @@ width: 100%;
     z-index: 1;
     background-color: rgba(32, 32, 32, 1);
     padding-left: 2000px;
-    padding-right: 150px;
+    padding-right: 2em;
     position: absolute;
     left:-1950px;
+    font-size: 2em;
 }
 
 .ProjectCard-row2-content{
     z-index: 1;
+    margin-bottom: 0;
+    margin-top: 12rem;
 }

@@ -3,6 +3,8 @@
     background-color: rgba(25,60,82,0.5);
     border: 3px solid rgba(25,60,82,1);
     overflow: hidden;
+    font-size: 2rem;
+    
 }
 .InterestCard-Title{
     letter-spacing: 6px;
@@ -19,16 +21,19 @@
 }
 
 .InterestCard-container{
-position: relative;
-
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
 }
 .InterestCard-row1{
     position: relative;
     z-index: 2;
     color: rgba(25,60,82,1);
+    width: 30%;
 }
 
 .InterestCard-row2{
+    width: 70%;
 }
 
 .InterestCard-row2-frame{
@@ -44,10 +49,11 @@ position: relative;
     z-index: 1;
     background-color: rgba(32, 32, 32, 1);
     padding-left: 2000px;
-    padding-right: 150px;
+    padding-right: 2em;
     position: absolute;
     left:-1950px;
     margin: 0;
+    font-size: 2em;
 }
 
 .InterestCard-row2-title.reverse{

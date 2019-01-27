@@ -35,9 +35,10 @@ class ContactForm extends Component {
           <TypeText typedText={['Questions?', 'Just Saying Hi?', 'Work Together?', 'New Project Idea?']}/>
         </div>
         <div className='flex row row-center form-header'>
-          <span className='sl sl-big'>Contact Me</span>
+          <span className='sl '>Contact</span>
         </div>
-        {/* <div className="flex row col-center input">
+        {/* 
+        <div className="flex row col-center input">
           <img src={userIcon}/>
           <input
             className='ms text-input' 
@@ -65,7 +66,8 @@ class ContactForm extends Component {
             onChange={this.messageChange}
             placeholder={this.state.messageDefault}/>
         </div>
-        <button type="submit" value="Submit" className="w5 h4 mt4 shadow-5"><span className="f-subheadline ">Submit</span></button> */}
+        <button type="submit" value="Submit" className="w5 h4 mt4 shadow-5"><span className="f-subheadline ">Submit</span></button> 
+        */}
         <a onClick="javascript:window.open('mailto:chrisdirks.developer@gmail.com', 'mail');event.preventDefault()" href="mailto:chrisdirks.developer@gmail.com"className="f2 white">chrisdirks.developer@gmail.com</a>
       </form>
     );

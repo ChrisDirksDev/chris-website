@@ -8,7 +8,7 @@ const TopicSelector = ({Topics, click}) => {
       <div className='row flex justify-center items-center'>
         <span className="topicselector-headline f1 lh-title fw8 mv5 white ">{Topics.Headline}</span>
       </div>
-      <div className='row flex justify-center items-center'>
+      <div className='TopicSelector-Container row flex justify-center flex-wrap'>
         {
           Topics.Images.map( (item,index) =>{
             let mod = "";

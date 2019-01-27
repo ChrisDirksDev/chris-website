@@ -4,7 +4,7 @@ import NavItem from './NavItem/NavItem'
 
 const TopNavBar = ({changeCategory, category}) =>  {
     return (
-      <div className="TopNavBar flex sl row-center border-gradient-bottem-right">
+      <div className="TopNavBar flex  flex-wrap sl row-center border-gradient-bottem-right">
         <div className = "LeftNavGroup flex w-50 justify-end">
           <div className="navContainer">
             <NavItem active={("HOME"=== category)} title='HOME' value='HOME' clickEvent={changeCategory}/>

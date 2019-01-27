@@ -4,33 +4,39 @@
     border: 5px solid rgba(25,60,82,1);
     background-color: rgba(25,60,82,0.5);
     flex: 0 0 auto;
-    width: 300px;
-    height: 600px;
+    width: 15rem;
+    height: 100%;
     border-radius: 25px;
     overflow: hidden;
+    font-size: 1rem;
 }
 
 .image-container{
     padding: 15px;
     transition: all 0.3s;
+    font-size:7rem;
 }
 .TopicContainer:hover .TopicItem{
     background-color: rgba(32, 32, 32, 1);
     border-color: orange;
     cursor: pointer;
     justify-content: initial
+    
 }
 
+.TopicContainer{
+    height: 30rem;
+}
 .TopicContainer:hover .TopicItem-hoverContentContainer{
-    top: 250px;
+    top:45%;
 }
 
 .TopicContainer:hover .TopicItem-Content {
-    top: 13px;
+    top: 1rem;
 }
 
 .TopicContainer:hover .image-container {
-    margin-top: 60px;
+    margin-top: 3rem;
 }
 
 .TopicItem span{
@@ -38,7 +44,7 @@
 }
 .TopicItem-hoverContentContainer{
     position: absolute;
-    width: 300px;
+    width: 14rem;
     transition: all 0.3s;
     left: 0;
     top: 600px;
@@ -53,7 +59,7 @@
 
 .TopicItem-Content{
     background-color: rgba(32, 32, 32, 1);
-    width: 300px;
+    width: 15rem;
     text-align: center;
     transition: all 0.3s;
     z-index: 1;

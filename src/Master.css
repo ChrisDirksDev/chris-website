@@ -7,6 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
+  overflow-y: hidden;
 }
 
 code {
@@ -18,24 +19,31 @@ code {
   height: 400px;
 }
 
-@media only screen and (max-width : 1024px) {
+@media only screen and (max-width : 1440px) {
 
-  body{
-    width: 1024px;
+  html{
+
   }
   
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  body{
-    width: 1024px;
+@media only screen and (max-width: 1440px){
+  html{
+    font-size: 10pt;
   }
+}
+
+@media only screen and (max-width: 750px){
+  html{
+    font-size: 8pt;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
-  body{
-    width: 1024px;
-  }
   
 }

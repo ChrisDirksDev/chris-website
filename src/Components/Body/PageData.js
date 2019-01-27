@@ -49,7 +49,7 @@ const TopicData = [
             ],
             HoverContent: [
               "Talking about my birdwatching hobby and my best buddy Koby.",
-              "Going over my love for making things with programming and just messing around with technology.",
+              "Going over my love for making things with programming.",
               "Discussing how games have shaped who I am today as well as what I like to play.",
               "Reviewing how anime has positivly affected my personal and work life."
             ],

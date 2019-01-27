@@ -4,7 +4,10 @@
 }
 
 .topicselector-headline{
+    text-align: center;
 }
 
-
-
+.TopicSelector-Container{
+    overflow: auto;
+    height: 90%;
+}

@@ -9,6 +9,7 @@ a{
 .underLeft{
     width: 200px;
     flex: 0 0 auto;
+    transition: all 1s;
 }
 
 .Footer-Content{
@@ -74,3 +75,15 @@ a{
   .policy-link:hover::after{
     background: orange;
 }
+
+@media only screen and (max-width: 1440px){
+    .underLeft{
+      width: 150px;
+    }
+  }
+  
+  @media only screen and (max-width: 750px){
+    .underLeft{
+      width: 100px;
+    }
+  }

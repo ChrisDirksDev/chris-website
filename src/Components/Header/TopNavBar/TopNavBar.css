@@ -1,10 +1,9 @@
 .TopNavBar{
   justify-content: center;
-  align-items: center;
   flex: 0 1 auto;
-  align-items: flex-start;
-  height: 90px;
-  font-size: 50pt;
+  align-items: center;
+  height: 1.5em;
+  font-size: 4rem;
   letter-spacing: 6px;
   /* border-bottom: 3px outset #2980B9; */
   background: rgba(32,32,32,1);
@@ -12,52 +11,40 @@
   width: 100%;
 }
 
-.navContainer.logo{
-  margin: auto 10px;
-  flex: 0 0 auto;
-  width: 100px;
-}
-
 .RightNavGroup,.LeftNavGroup{
   justify-content: space-around;
+  align-content: center
 }
 
 .navContainer{
-  height: 80px;
   flex: 0 1 auto;
   display: flex;
-  margin: auto 30px;
+  margin: auto;
   justify-content: center;
 }
 
- @media only screen and (max-width: 1400px){
+@media only screen and (max-width: 1440px){
   .navContainer{
-    font-size: 30pt;
     margin: auto 10px;
+    font-size: 2rem;
   }
-
   .RightNavGroup{
     justify-content: flex-start;
+    width: auto;
   }
   .LeftNavGroup{
     justify-content: flex-end;
-  }
-}
-/*
-@media only screen and (max-width: 1000px){
-  .navContainer{
     width: auto;
   }
-} */
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-
-  /* Styles */
-  
+  .TopNavBar,.logo{
+    height: 4rem;
   }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+}
 
-  /* Styles */
-  
+@media only screen and (max-width: 750px){
+  .navContainer{
+    font-size: 1.5rem;
   }
+}
+

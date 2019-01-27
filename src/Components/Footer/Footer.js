@@ -9,12 +9,12 @@ const Footer = ({policyClick}) => {
 
         </div>
         <div className="Footer-Content flex justify-between items-center f5 pl3">
-            <div className="copyright">
+            <div className="copyright flex flex-wrap">
                 <span>Copyright &copy; {(new Date()).getFullYear().toString()} Chris Dirks</span>
                 <span> | </span>
                 <span className="policy-link underline pointer" onClick={() => policyClick('POLICY')}>Privacy Policy</span>
             </div>
-            <div className="links">
+            <div className="links flex flex-wrap">
                 <a className="mr3 " href="https://github.com/Crexfu">
                 <FontAwesomeIcon icon={['fab',"github"]}/> Github</a>
                 <a className="mr3 " href="https://twitter.com/allthebundts?lang=en">

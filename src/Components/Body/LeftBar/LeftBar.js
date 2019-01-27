@@ -4,7 +4,7 @@ import LeftBarItem from './LeftBarItem/LeftBarItem'
 
 const LeftBar = ({activeCategory, activeTopic, topicData, prevCategory, onTopicClick}) => {
 
-  let defaultPanelStyle = "LeftBar flex flex-column f4 fw4 pt3";
+  let defaultPanelStyle = "LeftBar flex flex-column fw4 pt3";
 
   let show = (prevCategory != null && activeCategory.links.length > 0 && 
     prevCategory.links.length > 0)? ' slowShow': ' fastShow';

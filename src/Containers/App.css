@@ -8,6 +8,8 @@
   height: 100%;
   text-shadow: 2px 2px 5px #202020;
   font-family: 'Montserrat', sans-serif; 
+  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .Particles{
@@ -26,6 +28,5 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: -2;    
-  min-width: 950px;
+  z-index: -2;
 }

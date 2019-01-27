@@ -11,7 +11,7 @@ const TopicItem = ({classMod, img, content, hoverContent, click, value}) => {
 
       <div className={'flex sl flex-column w5 h5 TopicItem shadow-1 h-400 relative ' }onClick={() => click(value)}>
         <div className="image-container white mt6">
-          <FontAwesomeIcon icon={[img.prefix, img.name]} size="10x"/>
+          <FontAwesomeIcon icon={[img.prefix, img.name]}/>
         </div>
         <div className="TopicItem-hoverContentContainer ">
           <p className="TopicItem-hoverContentContainer-txt w-100 ph2 pt4 f2">{hoverContent}</p>

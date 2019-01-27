@@ -6,7 +6,7 @@ const Header = ({changeCategory, category}) => {
     return (
       <div className="Header flex">
         <div className='logobox flex relative border-gradient-right-up border-gradient-bottem-left'>
-          <img className='logo' src={logo} alt='Logo' style={{ height: 81, width: 180}}/>
+          <img className='logo' src={logo} alt='Logo' />
         </div>
         <TopNavBar changeCategory = {changeCategory} category = {category}/>
       </div>
