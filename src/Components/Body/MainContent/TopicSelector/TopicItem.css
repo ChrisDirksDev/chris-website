@@ -1,0 +1,80 @@
+.TopicItem{
+    align-items: center;
+    transition: all 0.3s;
+    border: 5px solid rgba(25,60,82,1);
+    background-color: rgba(25,60,82,0.5);
+    flex: 0 0 auto;
+    width: 15rem;
+    height: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+.image-container{
+    padding: 15px;
+    transition: all 0.3s;
+    font-size:7rem;
+}
+.TopicContainer:hover .TopicItem{
+    background-color: rgba(32, 32, 32, 1);
+    border-color: orange;
+    cursor: pointer;
+    justify-content: initial
+    
+}
+
+.TopicContainer{
+    height: 30rem;
+}
+.TopicContainer:hover .TopicItem-hoverContentContainer{
+    top:45%;
+}
+
+.TopicContainer:hover .TopicItem-Content {
+    top: 1rem;
+}
+
+.TopicContainer:hover .image-container {
+    margin-top: 3rem;
+}
+
+.TopicItem span{
+    margin-bottom: 5px;
+}
+.TopicItem-hoverContentContainer{
+    position: absolute;
+    width: 14rem;
+    transition: all 0.3s;
+    left: 0;
+    top: 600px;
+}
+
+.TopicItem-hoverContentContainer > *{
+    position: absolute;
+    transition: all 0.3s;
+    left: 0px;
+    top: 0px;
+}
+
+.TopicItem-Content{
+    background-color: rgba(32, 32, 32, 1);
+    width: 15rem;
+    text-align: center;
+    transition: all 0.3s;
+    z-index: 1;
+    top:25px;
+    color: white;
+}
+.TopicItem-hoverContentContainer-txt{
+    z-index: 2;
+    color: white;
+    left: 0px;
+    top: 0px;
+}
+
+.TopicItem-hoverContentContainer-img{
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+}

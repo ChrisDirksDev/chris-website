@@ -1,0 +1,50 @@
+.TopNavBar{
+  justify-content: center;
+  flex: 0 1 auto;
+  align-items: center;
+  height: 1.5em;
+  font-size: 4rem;
+  letter-spacing: 6px;
+  /* border-bottom: 3px outset #2980B9; */
+  background: rgba(32,32,32,1);
+  position: relative;
+  width: 100%;
+}
+
+.RightNavGroup,.LeftNavGroup{
+  justify-content: space-around;
+  align-content: center
+}
+
+.navContainer{
+  flex: 0 1 auto;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1440px){
+  .navContainer{
+    margin: auto 10px;
+    font-size: 2rem;
+  }
+  .RightNavGroup{
+    justify-content: flex-start;
+    width: auto;
+  }
+  .LeftNavGroup{
+    justify-content: flex-end;
+    width: auto;
+  }
+  .TopNavBar,.logo{
+    height: 4rem;
+  }
+
+}
+
+@media only screen and (max-width: 750px){
+  .navContainer{
+    font-size: 1.5rem;
+  }
+}
+
