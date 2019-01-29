@@ -3,11 +3,11 @@
     
 }
 
-.topicselector-headline{
+.topicselector__headline{
     text-align: center;
 }
 
-.TopicSelector-Container{
+.topicselector__container{
     overflow: auto;
     height: 90%;
 }

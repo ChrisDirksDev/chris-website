@@ -1,47 +1,39 @@
 import React from 'react';
 import './InterestCard.css';
-import Link from '../../../Utils/Link'
-import frame from '../TopicSelector/dirks-gridframe.svg'
+import AButton from '../../../Utils/AButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const InterestCard = ({imageURL, link,title, icon, alt, content, reverse = false}) => {
+const InterestCard = ({imageURL, link,title, icon, alt, content, options = {}}) => {
+  let {reverse, orientation} = options;
+  
   let mIcon = (icon==null)? null:<FontAwesomeIcon icon={[icon.prefix,icon.name]} size="xs"/>
-  let mLink = (link.ref==null)? null:<a href={link.ref} className="w-50 h3 shadow-5 button tc">{mIcon}<span className="pl3">{link.content}</span></a>
-    
-  if(!reverse){
-    return (
-      <div className="InterestCard flex justify-start white">
-        <div className="InterestCard-container justify-center flex">
-          <div className='InterestCard-row1 flex flex-column  items-center w-40'>
-            <img className="InterestCard-Img ma2" src={imageURL}/>
-            {mLink}
-          </div>
-          <div className='InterestCard-row2 flex flex-column w-40   pa4 relative'>
-              <h1 className="InterestCard-row2-title sl f-headline lh-solid InterestCard-Title relative">{title}</h1>
-              <p className="InterestCard-row2-content  relative mt6">{content}</p>
-              {/* <img className="InterestCard-row2-frame" src={frame}/> */}
-          </div>
-        </div>
-      </div>
-    );
+  let mLink = (link.ref==null)? null:<AButton text={link.content} mRef={link.ref} icon={icon} /> 
+  
 
-  }else{
-    return (
-      <div className="InterestCard flex justify-start white">
-        <div className="InterestCard-container flex justify-center">
-          <div className='InterestCard-row2 flex flex-column w-40 relative'>
-              <h1 className="InterestCard-row2-title reverse sl f-headline lh-solid InterestCard-Title relative">{title}</h1>
-              <p className="InterestCard-row2-content reverse  relative mt6">{content}</p>
-              {/* <img className="InterestCard-row2-frame" src={frame}/> */}
-          </div>
-          <div className='InterestCard-row1 flex flex-column items-center w-30 ma3 pa2 '>
-            <img className="InterestCard-Img" src={imageURL}/>
+  let vert = (orientation == 'v')? 'verticle':'';
+  let rev = (reverse)? 'reverse':'';
+  let containerStyle= '';
+
+  if ((vert+rev).length > 0) {
+    containerStyle = "interestcard__container--"+ vert + rev;
+  }
+
+  return(
+    <div className="interestcard flex white ph4">
+      <div className={"interestcard__container justify-start flex " + containerStyle}>
+        <div className='interestcard__group1 flex flex-column '>
+          <img className="interestcard__group1__img ma2" src={imageURL}/>
+          <h1 className={"interestcard__group2__title block--sl f-headline lh-solid relative " + ((reverse)? ' interestcard__group2__title--reverse':'')}>{title}</h1>
+          <div className="f1">
             {mLink}
           </div>
         </div>
+        <div className='interestcard__group2 flex flex-column pa4 relative'>
+          <p className={"interestcard__group2__content f3 relative mt6 " + ((reverse)? ' interestcard__group2__content--reverse':'')}>{content}</p>
+        </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default InterestCard;

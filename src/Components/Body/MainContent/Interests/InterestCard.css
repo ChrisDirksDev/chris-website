@@ -1,77 +1,104 @@
-.InterestCard{
-    /* background-color: rgba(32, 32, 32, 1); */
+.interestcard{
     background-color: rgba(25,60,82,0.5);
     border: 3px solid rgba(25,60,82,1);
     overflow: hidden;
     font-size: 2rem;
-    
-}
-.InterestCard-Title{
-    letter-spacing: 6px;
-}
-.InterestCard img{
-    /* padding-right: 5px; */
-    /* padding-bottom: 5px;
-    border-right: 2px solid #2980B9;
-    border-bottom: 2px solid #2980B9; */
+    width: 100%;
+    justify-content: center
 }
 
 .InterestCard a{
     height: 150px;
 }
 
-.InterestCard-container{
+.interestcard__container{
     position: relative;
     width: 100%;
     overflow-x: hidden;
+    justify-content: center;
 }
-.InterestCard-row1{
-    position: relative;
+
+.interestcard__container--reverse{
+    flex-direction: row-reverse;
+}
+
+.interestcard__container--verticle{
+    flex-direction: column;
+    width: 80%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 2em;
+}
+
+.interestcard__container--verticlereverse{
+    flex-direction: column-reverse;   
+}
+
+.interestcard__group1{
     z-index: 2;
-    color: rgba(25,60,82,1);
-    width: 30%;
-}
-
-.InterestCard-row2{
-    width: 70%;
-}
-
-.InterestCard-row2-frame{
-    position: absolute;
-    left: 0;
-    top: -120px;
-    width: 100%;
-    z-index: -1;
-    opacity: 0;
-    transform: scaleX(-1);
-}
-.InterestCard-row2-title{
-    z-index: 1;
-    background-color: rgba(32, 32, 32, 1);
-    padding-left: 2000px;
-    padding-right: 2em;
-    position: absolute;
-    left:-1950px;
-    margin: 0;
+    width: auto;
+    position: relative;
     font-size: 2em;
 }
 
-.InterestCard-row2-title.reverse{
+.interestcard__container--verticle .interestcard__group1{
+    justify-content: flex-end;
+}
+
+.interestcard__group1__img{
     z-index: 1;
+}
+
+.interestcard__group2{
+    width: 50%
+}
+
+.interestcard__container--verticle .interestcard__group1__img{
+    max-width: 565px;
+    max-height: 380px;
+}
+
+.interestcard__container--verticle .interestcard__group2,
+.interestcard__container--verticle .interestcard__group1{
+    width: 100%;
+}
+
+.interestcard__group2__title{
+    z-index: 0;
     background-color: rgba(32, 32, 32, 1);
-    padding-right: 2000px;
-    padding-left: 150px;
+    padding-left: 120%;
+    padding-right: 1em;
     position: absolute;
+    left: -10%;
+    margin-top: 1em;
+    font-size: 1em;
+    letter-spacing: 6px;
+    white-space: nowrap;
+}
+
+.interestcard__container--verticle .interestcard__group2__title{
+    z-index: 1;
+    margin: 0;
+    left: 5em;
+    padding-left: 1em;
+    right: auto;
+}
+
+.interestcard__group2__title--reverse{
+    padding-left: 1em;
+    right: -10%;
     left: auto;
-    right:-1950px;
-    
+    padding-right: 120%;
 }
 
-.InterestCard-row2-content{
+.interestcard__group2__content{
     z-index: 1;
 }
 
-.InterestCard-row2-content.reverse{
-    z-index: 1;
+.interestcard__group2__content--reverse{
     text-align: right;
+}
+
+.interestcard__container--verticle .interestcard__group2__content{
+    margin-top: 0;
 }

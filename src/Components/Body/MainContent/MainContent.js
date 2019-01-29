@@ -38,14 +38,16 @@ const MainContent = ({activeCategory, activeTopic, changeCategory, changeTopic})
               <InterestCard imageURL={topicData[0].Image} title={topicData[0].Title}alt="photo1" content={topicData[0].Content} icon={topicData[0].icon} link={topicData[0].Link}/>
             </div>
             <div className="interestDouble-bottom h-50 flex justify-center">
-              <InterestCard imageURL={topicData[1].Image} alt="photo2" title={topicData[1].Title} content={topicData[1].Content} reverse={true} icon={topicData[1].icon} link={topicData[1].Link}/>
+              <InterestCard imageURL={topicData[1].Image} alt="photo2" title={topicData[1].Title} content={topicData[1].Content} options={{'reverse': true}} icon={topicData[1].icon} link={topicData[1].Link}/>
             </div>
           </div>
         )
         case 'interestsDefault':
-          return <InterestCard imageURL={topicData.Image} title={topicData.Title} content={topicData.Content} icon={topicData.icon} link={topicData.Link}/>
+          return (<div className=" flex justify-center">
+                     <InterestCard imageURL={topicData.Image} title={topicData.Title} content={topicData.Content} options={{'orientation': 'v'}} icon={topicData.icon} link={topicData.Link}/>
+                  </div>)
         case 'projectsDefault':
-          return <ProjectCard imageURL={topicData.Image} title={topicData.Title} content={topicData.Content} icon={topicData.icon} link={topicData.Link}/>
+          return <InterestCard imageURL={topicData.Image} title={topicData.Title} content={topicData.Content} icon={topicData.icon} link={topicData.Link}/>
         case 'contactDefault':
           return <ContactForm/>
         case 'policyDefault':

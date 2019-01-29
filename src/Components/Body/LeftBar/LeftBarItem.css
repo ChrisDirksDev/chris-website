@@ -1,16 +1,15 @@
-.LeftBarItem{
+.leftbaritem{
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   flex: 0 0 auto;
   position: relative;
-
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
 }
 
-.LeftBarItem:hover:after{
-  width: 200px;
-}
-
-.LeftBarItem:after{
+.leftbaritem:after{
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   position: absolute;
@@ -23,17 +22,24 @@
   background: orange;
 }
 
-.LeftBarItem.active > svg{
-  color: orange;
+.leftbaritem:hover:after{
+  width: 200px;
 }
 
-.LeftBarItem.active:after{
+.leftbaritem--active:after{
   background: orange;
   width: 200px;
 }
 
-.LeftBarItem > svg{
+.fontawesomeicon{
   margin-right: 5px;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
 }
+
+.leftbaritem--active .fontawesomeicon{
+  color: orange;
+
+}
+
+

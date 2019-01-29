@@ -4,9 +4,9 @@ import TopNavBar from './TopNavBar/TopNavBar';
 import logo from './dirksbird.svg'
 const Header = ({changeCategory, category}) => {
     return (
-      <div className="Header flex">
-        <div className='logobox flex relative border-gradient-right-up border-gradient-bottem-left'>
-          <img className='logo' src={logo} alt='Logo' />
+      <div className="header flex">
+        <div className='logobox block flex relative block--gradient-right-up block--gradient-bottem-left'>
+          <img className='logobox__logo' src={logo} alt='Logo' />
         </div>
         <TopNavBar changeCategory = {changeCategory} category = {category}/>
       </div>

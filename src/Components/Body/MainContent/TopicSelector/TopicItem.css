@@ -1,4 +1,4 @@
-.TopicItem{
+.topicitem{
     align-items: center;
     transition: all 0.3s;
     border: 5px solid rgba(25,60,82,1);
@@ -11,38 +11,34 @@
     font-size: 1rem;
 }
 
-.image-container{
+.topicitem__image{
     padding: 15px;
     transition: all 0.3s;
     font-size:7rem;
 }
-.TopicContainer:hover .TopicItem{
+.topiccontainer:hover .topicitem{
     background-color: rgba(32, 32, 32, 1);
     border-color: orange;
     cursor: pointer;
     justify-content: initial
-    
 }
 
-.TopicContainer{
+.topiccontainer{
     height: 30rem;
 }
-.TopicContainer:hover .TopicItem-hoverContentContainer{
+.topiccontainer:hover .topicitem__hovercontent{
     top:45%;
 }
 
-.TopicContainer:hover .TopicItem-Content {
+.topiccontainer:hover .topicitem__title {
     top: 1rem;
 }
 
-.TopicContainer:hover .image-container {
+.topiccontainer:hover .topicitem__image {
     margin-top: 3rem;
 }
 
-.TopicItem span{
-    margin-bottom: 5px;
-}
-.TopicItem-hoverContentContainer{
+.topicitem__hovercontent{
     position: absolute;
     width: 14rem;
     transition: all 0.3s;
@@ -50,14 +46,14 @@
     top: 600px;
 }
 
-.TopicItem-hoverContentContainer > *{
+.topicitem__hovercontent> *{
     position: absolute;
     transition: all 0.3s;
     left: 0px;
     top: 0px;
 }
 
-.TopicItem-Content{
+.topicitem__title{
     background-color: rgba(32, 32, 32, 1);
     width: 15rem;
     text-align: center;
@@ -66,14 +62,14 @@
     top:25px;
     color: white;
 }
-.TopicItem-hoverContentContainer-txt{
+.topicitem__hovercontent__content{
     z-index: 2;
     color: white;
     left: 0px;
     top: 0px;
 }
 
-.TopicItem-hoverContentContainer-img{
+.topicitem__hovercontent__img{
     z-index: 1;
     left: 0px;
     top: 0px;

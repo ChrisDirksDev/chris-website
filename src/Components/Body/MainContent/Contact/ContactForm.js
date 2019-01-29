@@ -30,12 +30,12 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form className="ContactForm flex flex-column col-center h-100 mt5">
+      <form className="contactform flex flex-column items-center col-center h-100 mt5">
         <div className='flex row dynamic-row ms'>
           <TypeText typedText={['Questions?', 'Just Saying Hi?', 'Work Together?', 'New Project Idea?']}/>
         </div>
-        <div className='flex row row-center form-header'>
-          <span className='sl '>Contact</span>
+        <div className='flex row row-center  justify-center form-header'>
+          <span className='block--sl '>Contact</span>
         </div>
         {/* 
         <div className="flex row col-center input">

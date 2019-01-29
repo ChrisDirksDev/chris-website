@@ -3,8 +3,8 @@ import './NavItem.css';
 
 const NavItem = ({active, title, value, clickEvent}) => {
     return (
-      <div className={'NavItem pointer' + ((active)? ' active':'')} onClick={ () => {clickEvent(value)}}>
-        <span>{title}</span>
+      <div className={'navitem pointer' + ((active)? ' navitem--active':'')} onClick={ () => {clickEvent(value)}}>
+        <span className="navitem__title">{title}</span>
       </div>
     );
 }

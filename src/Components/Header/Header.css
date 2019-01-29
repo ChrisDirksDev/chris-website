@@ -1,23 +1,23 @@
   
-.logobox{
-  width: 200px;
-  flex: 0 0 auto;
-  background: rgba(32,32,32,1);
-  z-index: 1;
-  transition: all 1s;
+.header{
+  flex: none;
 }
 
-.Header{
-  flex: 0 0 auto;
+.logobox{
+  width: 200px;
+  flex: none;
+  background: rgba(32,32,32,1);
+  z-index: 1;
+  transition: all 0.3s;
 }
-.logobox  .logo{
+
+.logobox__logo{
   margin: auto;
   perspective: 1200px;
   transform-style: preserve-3d;
-
 }
 
-.logobox:hover .logo{
+.logobox:hover .logobox__logo{
   animation-name: spinner;
   animation-timing-function: linear;
   animation-iteration-count: infinite;

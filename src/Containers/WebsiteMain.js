@@ -34,13 +34,9 @@ class WebsiteMain extends Component {
     this.setState({currentCategory: aLink, previousCategory: this.state.currentCategory})
   }
 
-  changeTopic = (topic) => {
-
-  }
-
   render() {
     return (
-      <div className="WebsiteMain flex">
+      <div className="websitemain flex">
           <Header changeCategory = {this.changeCategory} category = {this.state.currentCategory}/>
           <Body changeCategory = {this.changeCategory} active={this.state.currentCategory} 
           prev={this.state.previousCategory} unique={Date.now()}/>

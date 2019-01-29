@@ -4,7 +4,7 @@
 
 
 
-.App {
+.app {
   height: 100%;
   text-shadow: 2px 2px 5px #202020;
   font-family: 'Montserrat', sans-serif; 
@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.Particles{
+.particles{
   width: 100%;
   top: 0px;
   bottom: 0px;
@@ -21,7 +21,7 @@
   z-index: -1;
 }
 
-.part-container{
+.app__container{
   background: linear-gradient(135deg,#202020, #2980B9 );
   background-size: 400% 400%;
   background-position:0% 0%;
