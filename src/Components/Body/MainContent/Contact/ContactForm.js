@@ -43,7 +43,7 @@ class ContactForm extends Component {
       }
     });
 
-    let mailOptions = {
+    let mailOptions = { 
       from: '"Fred Foo 👻" <test@chrisdirks.com>', // sender address
       to: "chrisdirks1@gmail.com", // list of receivers
       subject: "Hello ✔", // Subject line
