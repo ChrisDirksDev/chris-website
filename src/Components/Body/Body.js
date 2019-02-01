@@ -51,7 +51,7 @@ class Body extends Component {
       let activeCategory = this.getCategoryData(this.props.active);
       let prevCategory = this.getCategoryData(this.props.prev);
         return(
-            <div className ="Body flex">
+            <div className ="appbody flex">
                 <LeftBar activeCategory={activeCategory} activeTopic={this.state.displayedContent} 
                 prevCategory={prevCategory} topicData={TopicData} onTopicClick={this.onTopicClick}/>
                 <MainContent activeCategory={activeCategory} activeTopic={this.state.displayedContent} 

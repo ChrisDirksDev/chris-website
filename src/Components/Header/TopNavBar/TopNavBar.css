@@ -1,6 +1,5 @@
-.TopNavBar{
+.topnavbar{
   justify-content: center;
-  flex: 0 1 auto;
   align-items: center;
   height: 1.5em;
   font-size: 4rem;
@@ -11,12 +10,12 @@
   width: 100%;
 }
 
-.RightNavGroup,.LeftNavGroup{
+.navgroup{
   justify-content: space-around;
   align-content: center
 }
 
-.navContainer{
+.navgroup__container{
   flex: 0 1 auto;
   display: flex;
   margin: auto;
@@ -24,26 +23,26 @@
 }
 
 @media only screen and (max-width: 1440px){
-  .navContainer{
+  .navgroup__container{
     margin: auto 10px;
     font-size: 2rem;
   }
-  .RightNavGroup{
+  .navgroup{
+    width: auto;
+  }
+  .navgroup--right{
     justify-content: flex-start;
-    width: auto;
   }
-  .LeftNavGroup{
+  .navgroup--left{
     justify-content: flex-end;
-    width: auto;
   }
-  .TopNavBar,.logo{
+  .topnavbar,.logobox__logo{
     height: 4rem;
   }
-
 }
 
 @media only screen and (max-width: 750px){
-  .navContainer{
+  .navgroup__container{
     font-size: 1.5rem;
   }
 }

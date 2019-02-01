@@ -17,15 +17,14 @@
     /* padding-bottom: 5px;
     border-right: 2px solid #2980B9;
     border-bottom: 2px solid #2980B9; */
-    background-color: rgba(25,60,82,1);
-    border: 3px solid black;
+    /* background-color: rgba(25,60,82,1);
+    border: 3px solid black; */
     padding: 15px;
 }
 
 
 .ProjectCard-container{
 position: relative;
-width: 100%;
 overflow: auto
 }
 .ProjectCard-row1{

@@ -89,9 +89,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className='part-container'>
-          <Particles className="Particles"
+      <div className="app">
+        <div className='app__container'>
+          <Particles className="particles"
             params={pOptions} />
         </div>
         <WebsiteMain/>

@@ -3,10 +3,12 @@ import './LeftBarItem.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const LeftBarItem = ({title, icon, active, value, click}) => {
-    let style = active? " active": "";
+    let style = active? " leftbaritem--active": "";
     return (
-      <div className={"LeftBarItem flex pointer ml3 white fw6" + style} onClick={() =>{ click(value)}}>
-        <FontAwesomeIcon icon={[icon.prefix, icon.name]} size=""/>
+      <div className={"leftbaritem flex pointer ml3 fw6" + style} onClick={() =>{ click(value)}}>
+        <div className="fontawesomeicon">
+          <FontAwesomeIcon icon={[icon.prefix, icon.name]}/>
+        </div>
         <span>{title}</span>
       </div>
     );

@@ -9,7 +9,7 @@ const ProjectCard = ({imageURL, link,title, icon, alt, content, reverse}) => {
     let mLink = (link.ref==null)? null:<a href={link.ref} className="f1 pa2 w5 mt3 shadow-5 button tc">{mIcon}<span className="pl3">{link.content}</span></a>
     return (
       <div className="ProjectCard flex justify-start white">
-        <div className="ProjectCard-container flex justify-between">
+        <div className="ProjectCard-container flex justify-between ph4">
         <div className='ProjectCard-row1 flex flex-column  items-center w-30 ma3 pa2'>
           <img className="ProjectCard-Img" src={imageURL}/>
           {mLink}

@@ -1,19 +1,19 @@
 import React from 'react';
 import './LeftBar.css';
-import LeftBarItem from './LeftBarItem/LeftBarItem'
+import LeftBarItem from './LeftBarItem'
 
 const LeftBar = ({activeCategory, activeTopic, topicData, prevCategory, onTopicClick}) => {
 
-  let defaultPanelStyle = "LeftBar flex flex-column fw4 pt3";
+  let defaultPanelStyle = "leftbar flex flex-column fw4 pt3";
 
   let show = (prevCategory != null && activeCategory.links.length > 0 && 
-    prevCategory.links.length > 0)? ' slowShow': ' fastShow';
+    prevCategory.links.length > 0)? ' leftbar--slowShow': ' leftbar--fastShow';
 
   return(
-    <div className ="LeftContainer border-gradient-right-down">
+    <div className ="leftcontainer block block--gradient-right-down">
       { topicData.map( category =>{
         return (
-          <div className={defaultPanelStyle+((category==activeCategory)? show:" hide")}>
+          <div className={defaultPanelStyle+((category==activeCategory)? show:" leftbar--hide")}>
             {category.links.map( link =>{
               if(link.id > 0){
                 return(

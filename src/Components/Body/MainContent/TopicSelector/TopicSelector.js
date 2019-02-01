@@ -4,11 +4,11 @@ import TopicItem from './TopicItem';
 
 const TopicSelector = ({Topics, click}) => {
   return (
-    <div className="TopicSelector w-100 flex flex-column  ">
+    <div className="topicselector w-100 flex flex-column  ">
       <div className='row flex justify-center items-center'>
-        <span className="topicselector-headline f1 lh-title fw8 mv5 white ">{Topics.Headline}</span>
+        <span className="topicselector__headline f1 lh-title fw8 mv5 white ">{Topics.Headline}</span>
       </div>
-      <div className='TopicSelector-Container row flex justify-center flex-wrap'>
+      <div className='topicselector__container row flex justify-center flex-wrap'>
         {
           Topics.Images.map( (item,index) =>{
             let mod = "";

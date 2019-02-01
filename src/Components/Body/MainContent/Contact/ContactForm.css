@@ -1,4 +1,4 @@
-.ContactForm{
+.contactform{
     height: 100%;
     color: #2980B9;
     flex: 0 0 auto;
@@ -7,19 +7,26 @@
     font-size: 16pt;
     transition: all 0.3s;
 }
-
-.ContactForm .row{
+.contactform__typed{
     margin: 10px 10px;
     background-color: white;
     border: 2px solid black;
     position: relative;
 }
 
-.ContactForm .hotlinks{
+.contactform__contact{
+        margin: 10px 10px;
+        background-color: white;
+        border: 2px solid black;
+        position: relative; 
+}
+
+
+.contactform .hotlinks{
     white-space: pre;
 }
 
-.ContactForm .row.input::before{
+.contactform .row.input::before{
     opacity: 0.5;
     width: 1px;
     height: 30px ;
@@ -32,46 +39,46 @@
     padding-right: 1px; 
 }
 
-.ContactForm img{
+.contactform img{
     height: 30px;
     padding: 5px;
 }
 
-.ContactForm .text-input{
+.contactform .text-input{
     font-size: 12pt;
     line-height: 30px;
 }
 
-.ContactForm > .row > input{
+.contactform > .row > input{
     height: 30px;
     width: 500px;
     margin: auto 10px;
     border: 0; 
 }
 
-.ContactForm  input:focus,.ContactForm  textarea:focus{
+.contactform  input:focus,.ContactForm  textarea:focus{
     outline: none;
 }
 
-.ContactForm textarea{
+.contactform textarea{
     margin: auto 10px;
     width: 500px;
     height: 150px;
     border: 0;
 }
 
-.ContactForm label{
+.contactform label{
     width: 150px;
     text-align: right;
 }
 
-.ContactForm .row.form-header{
+.contactform .row.form-header{
     background-color: rgba(0, 0, 0, 0);
     border: none;
     font-size: 10em;
 }
 
-.ContactForm .dynamic-row{
+.contactform .dynamic-row{
     background-color: rgba(0, 0, 0, 0);
     border: none;
     font-size: 3em;
@@ -80,22 +87,22 @@
     
 }
 
-.ContactForm a{
+.contactform a{
     font-size: 2em;
 }
 
-.ContactForm .form-header > p{
+.contactform .form-header > p{
     margin: 15px auto;
 }
 
 @media only screen and (max-width: 1440px){
-    .ContactForm{
+    .contactform{
         font-size: 12pt;
     }
 }
 
 @media only screen and (max-width: 750px){
-    .ContactForm{
+    .contactform{
         font-size: 8pt;
     }
 }

@@ -1,0 +1,53 @@
+.abutton{
+    transition: all 0.3s;
+    background: rgba(41, 127, 185, 1);
+    border-color: rgba(32, 32, 32, 0.5);
+    border: 2px solid transparent;
+    color: white;
+    font-family: 'Sleeve';
+    font-size: 1em;
+    letter-spacing: 0px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    line-height: 1em;
+    width: inherit;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .abutton:hover{
+    border-color: orange;
+    cursor: pointer;
+  }
+  
+  .abutton__icon{
+    font-size: 0.5em;
+  }
+  .abutton:after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: rgba(32, 32, 32, 1);
+    transform: skew(25deg) scale(0);
+    left: -25%;
+    top: -25%;
+    transition: 300ms ease-in-out;
+  }
+  .abutton:hover:after {
+    transform: skew(25deg) scale(1);
+  }
+  .abutton>*{
+    position: relative;
+    z-index: 1;
+  }
+  .abutton_text{
+
+  }
+  .abutton__container{
+    text-align: center;
+  } 
+  .abutton:focus{
+    outline: none;
+  }
