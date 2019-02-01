@@ -16,6 +16,7 @@ class ContactForm extends Component {
       messageDefault:'Your message',
       message:''
     }
+
   }
 
   nameChange = (event) =>{
@@ -27,6 +28,36 @@ class ContactForm extends Component {
   messageChange = (event) =>{
     this.setState({ message: event.target.value });
   }
+
+  async sendEmail() {
+
+    let nodemailer = require('nodemailer');
+
+    let transporter = nodemailer.createTransport({
+      host: "mail.chrisdirks.com",
+      port: 465,
+      secure: true, // true for 465, false for other ports
+      auth: {
+        user: 'text@chrisdirks.com', // generated ethereal user
+        pass: 'Legacy6354' // generated ethereal password
+      }
+    });
+
+    let mailOptions = {
+      from: '"Fred Foo 👻" <test@chrisdirks.com>', // sender address
+      to: "chrisdirks1@gmail.com", // list of receivers
+      subject: "Hello ✔", // Subject line
+      text: "Hello world?", // plain text body
+      html: "<b>Hello world?</b>" // html body
+    };
+
+    let info = await transporter.sendMail(mailOptions)
+
+    console.log("Message sent: %s", info.messageId);
+    // Preview only available when sending through an Ethereal account
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  }
+
 
   render() {
     return (
@@ -68,7 +99,7 @@ class ContactForm extends Component {
         </div>
         <button type="submit" value="Submit" className="w5 h4 mt4 shadow-5"><span className="f-subheadline ">Submit</span></button> 
         */}
-        <a onClick="javascript:window.open('mailto:chrisdirks.developer@gmail.com', 'mail');event.preventDefault()" href="mailto:chrisdirks.developer@gmail.com"className="f2 white">chrisdirks.developer@gmail.com</a>
+        <a onClick={this.sendEmail()} href="mailto:chrisdirks.developer@gmail.com"className="f2 white">chrisdirks.developer@gmail.com</a>
       </form>
     );
   }

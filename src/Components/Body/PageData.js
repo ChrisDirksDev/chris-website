@@ -170,7 +170,7 @@ const TopicData = [
             ],
             HoverContent: [
               "This very website that I made myself using React.",
-              "A Discord bot I made for fun using javascript and node.js.",
+              "A Discord bot I made for fun using Javascript and Node.js.",
               "A longtime side project developing a 2d game engine from the ground up.",
               "My early schoolwork I did including coursework and Internships."
             ],
@@ -208,7 +208,7 @@ const TopicData = [
           data: {
             Title: 'Discord Bot',
             Image: DiscordImage,
-            Content: "A bot made for discord servers. Developed using javascript and Node.js. I made this bot to increase my knowledge of Node.js and the backend functionality of chatbots. Features several chat features such as dice rolling, 8 Ball answers to directed questions, admin functions, Quotes, and others.... I also learned about AWS from this project as this bot is hosted on AWS and utilizes their databases for storage. Fun and very informative.",
+            Content: "A bot made for discord servers. Developed using javascript and Node.js. I made this bot to increase my knowledge of Node.js and the backend functionality of chatbots. Features several chat features such as dice rolling, 8 Ball answers to directed questions, admin functions, quotes, and others.... \n I also learned about AWS from this project as this bot is hosted on AWS and utilizes their databases for storage. Fun and very informative.",
             Link: {
               ref: 'https://github.com/Crexfu/DiscordBot',
               content: 'Github'
