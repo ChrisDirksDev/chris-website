@@ -4,7 +4,8 @@ import Header from '../Components/Header/Header';
 import Body from '../Components/Body/Body';
 import Footer from '../Components/Footer/Footer';
 
-const activeCategory = [
+//catagory list
+const CATAGORIES = [
   'HOME',
   'PROJECTS',
   'INTERESTS',
@@ -13,17 +14,17 @@ const activeCategory = [
 ]
 
 class WebsiteMain extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      currentCategory :  activeCategory[0], 
+      currentCategory: CATAGORIES[0],
       previousCategory: '',
     }
   }
 
-  changeCategory = (category) =>{
+  changeCategory = (category) => {
 
-    let aLink = activeCategory.find((Link) =>{
+    let aLink = CATAGORIES.find((Link) => {
       return Link.toString() === category;
     })
     if (aLink === undefined) {
@@ -31,16 +32,16 @@ class WebsiteMain extends Component {
       return
     }
 
-    this.setState({currentCategory: aLink, previousCategory: this.state.currentCategory})
+    this.setState({ currentCategory: aLink, previousCategory: this.state.currentCategory })
   }
 
   render() {
     return (
       <div className="websitemain flex">
-          <Header changeCategory = {this.changeCategory} category = {this.state.currentCategory}/>
-          <Body changeCategory = {this.changeCategory} active={this.state.currentCategory} 
-          prev={this.state.previousCategory} unique={Date.now()}/>
-          <Footer policyClick={this.changeCategory}/>
+        <Header changeCategory={this.changeCategory} category={this.state.currentCategory} />
+        <Body changeCategory={this.changeCategory} active={this.state.currentCategory}
+          prev={this.state.previousCategory} unique={Date.now()} />
+        <Footer policyClick={this.changeCategory} />
       </div>
     );
   }
