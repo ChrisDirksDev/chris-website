@@ -26,6 +26,12 @@
     white-space: pre;
 }
 
+.contactform__name-input,.contactform__email-input,.contactform__message-input{
+    background: white;
+    border: 1px solid black;
+    
+    position: relative;
+}
 .contactform .row.input::before{
     opacity: 0.5;
     width: 1px;
@@ -49,36 +55,41 @@
     line-height: 30px;
 }
 
-.contactform > .row > input{
+.contactform  .row > input{
     height: 30px;
-    width: 500px;
     margin: auto 10px;
+    width: 100%;
     border: 0; 
 }
 
-.contactform  input:focus,.ContactForm  textarea:focus{
+.contactform  input:focus,.contactform  textarea:focus{
     outline: none;
 }
 
-.contactform textarea{
+.contactform__message-input textarea{
     margin: auto 10px;
-    width: 500px;
     height: 150px;
+    width: 100%;
     border: 0;
+    position: relative;
 }
 
-.contactform label{
-    width: 150px;
-    text-align: right;
-}
-
-.contactform .row.form-header{
+.contactform__header{
     background-color: rgba(0, 0, 0, 0);
     border: none;
     font-size: 10em;
 }
 
-.contactform .dynamic-row{
+.email_confirmation{
+    font-size: 10em;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.contactform__dynamic-row{
     background-color: rgba(0, 0, 0, 0);
     border: none;
     font-size: 3em;
@@ -91,9 +102,7 @@
     font-size: 2em;
 }
 
-.contactform .form-header > p{
-    margin: 15px auto;
-}
+
 
 @media only screen and (max-width: 1440px){
     .contactform{
