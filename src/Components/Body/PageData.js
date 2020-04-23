@@ -193,7 +193,7 @@ const TopicData = [
             Image: GameImage,
             Content: "A side project to develop a 2D game engine from the ground up. Built using C#, and OpenGL, this project is helping me gain a greater understanding of developing larger, multi-module applications from scratch. Developing the physics engine has helped me further my knowledge of physics as well as general mathematics. Working on the rendering engine has given me new insight into the complicated nature of graphics rendering. This project is both a work of passion and skills development. Check out the GitHub link to take a look at it yourself.",
             Link: {
-              ref: 'https://github.com/Crexfu/rpg-engine',
+              ref: 'https://github.com/ChrisDirksDev/rpg-engine',
               content: 'Github'
             },
             icon: {prefix:'fas',name: 'gamepad'},
@@ -210,7 +210,7 @@ const TopicData = [
             Image: DiscordImage,
             Content: "A bot made for discord servers. Developed using javascript and Node.js. I made this bot to increase my knowledge of Node.js and the backend functionality of chatbots. Features several chat features such as dice rolling, 8 Ball answers to directed questions, admin functions, quotes, and others.... \n I also learned about AWS from this project as this bot is hosted on AWS and utilizes their databases for storage. Fun and very informative.",
             Link: {
-              ref: 'https://github.com/Crexfu/DiscordBot',
+              ref: 'https://github.com/ChrisDirksDev/DiscordBot',
               content: 'Github'
             },
             icon: {prefix:'fas',name: 'robot'},
@@ -227,7 +227,7 @@ const TopicData = [
             Image: WebsiteImage,
             Content: "This Website is one of my projects as well. It was made using React, JSX, JS(ES6), HTML5, and CSS. Check out the media below to see some of the changes the site underwent during development. I learned a lot over time about positioning, styling, and organization during the site's development and I believe it really shows in the evolution of the pages.",
             Link: {
-              ref: 'https://github.com/Crexfu/chris-website',
+              ref: 'https://github.com/ChrisDirksDev/chris-website',
               content: 'Github'
             },
             icon: {prefix:'fas',name: 'laptop-code'},
