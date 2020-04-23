@@ -4,12 +4,13 @@ import './MainContent.css';
 import HomeContent from './Home/HomeContent';
 import ContactForm from './Contact/ContactForm';
 import InterestCard from './Interests/InterestCard'
-import ProjectCard from './Projects/ProjectCard'
 import TopicSelector from './TopicSelector/TopicSelector'
 
-
+import Repo from '../../../Repo/Repo';
 
 const MainContent = ({activeCategory, activeTopic, changeCategory, changeTopic}) => {
+
+    const repo = new Repo('https://immense-hollows-28003.herokuapp.com/');
 
     let getContent = () => {
 
@@ -32,24 +33,26 @@ const MainContent = ({activeCategory, activeTopic, changeCategory, changeTopic})
         case 'topic-selector':
           return <TopicSelector Topics={topicData} click={changeTopic}/>
         case 'interestDouble':
-        return(
-          <div className="flex flex-column items-center justify-around">
-            <div className="interestDouble-top h-50 flex justify-center">
-              <InterestCard imageURL={topicData[0].Image} title={topicData[0].Title}alt="photo1" content={topicData[0].Content} icon={topicData[0].icon} link={topicData[0].Link}/>
+          return(
+            <div className="flex flex-column items-center justify-around">
+              <div className="interestDouble-top h-50 flex justify-center">
+                <InterestCard imageURL={topicData[0].Image} title={topicData[0].Title}alt="photo1" content={topicData[0].Content} icon={topicData[0].icon} link={topicData[0].Link}/>
+              </div>
+              <div className="interestDouble-bottom h-50 flex justify-center">
+                <InterestCard imageURL={topicData[1].Image} alt="photo2" title={topicData[1].Title} content={topicData[1].Content} options={{'reverse': true}} icon={topicData[1].icon} link={topicData[1].Link}/>
+              </div>
             </div>
-            <div className="interestDouble-bottom h-50 flex justify-center">
-              <InterestCard imageURL={topicData[1].Image} alt="photo2" title={topicData[1].Title} content={topicData[1].Content} options={{'reverse': true}} icon={topicData[1].icon} link={topicData[1].Link}/>
-            </div>
-          </div>
-        )
+          )
         case 'interestsDefault':
-          return (<div className=" flex justify-center">
-                     <InterestCard imageURL={topicData.Image} title={topicData.Title} content={topicData.Content} options={{'orientation': 'v'}} icon={topicData.icon} link={topicData.Link}/>
-                  </div>)
+          return (
+            <div className=" flex justify-center">
+                <InterestCard imageURL={topicData.Image} title={topicData.Title} content={topicData.Content} options={{'orientation': 'v'}} icon={topicData.icon} link={topicData.Link}/>
+            </div>
+          )
         case 'projectsDefault':
           return <InterestCard imageURL={topicData.Image} title={topicData.Title} content={topicData.Content} icon={topicData.icon} link={topicData.Link}/>
         case 'contactDefault':
-          return <ContactForm/>
+          return <ContactForm sendEmail={repo.sendEmail}/>
         case 'policyDefault':
           return(
             <div className="Policy f6 pl3">

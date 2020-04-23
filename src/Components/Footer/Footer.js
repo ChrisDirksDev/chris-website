@@ -15,10 +15,8 @@ const Footer = ({policyClick}) => {
                 <span className="copyright__policy-link underline pointer" onClick={() => policyClick('POLICY')}>Privacy Policy</span>
             </div>
             <div className="links flex flex-wrap">
-                <a className="mr3 " href="https://github.com/Crexfu">
+                <a className="mr3 " href="https://github.com/ChrisDirksDev">
                 <FontAwesomeIcon icon={['fab',"github"]}/> Github</a>
-                <a className="mr3 " href="https://twitter.com/allthebundts?lang=en">
-                <FontAwesomeIcon icon={['fab',"twitter"]}/> Twitter</a>
                 <a className="mr3 " href="https://www.linkedin.com/in/chris-dirks/">
                 <FontAwesomeIcon icon={['fab','linkedin-in']}/> Linkedin</a>
             </div>

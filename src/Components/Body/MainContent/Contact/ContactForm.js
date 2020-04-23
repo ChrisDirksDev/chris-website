@@ -7,18 +7,43 @@ import TypeText from '../TypeWriterText/TypewriterText'
 import Abutton from '../../../Utils/AButton';
 
 class ContactForm extends Component {
-  constructor(){
+  constructor(sendEmail){
     super();
     this.state = {
-      nameDefault: 'Your name',
-      name:'',
-      emailDefault: 'Your email',
-      email:'',
-      messageDefault:'Your message',
-      message:'',
-      emailSent:false
+      name: '',
+      email: '',
+      message: '',
+      emailSent: false,
+
+      touched: {
+        name: false,
+        email: false,
+        message: false
+      }
     }
 
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  //Snagged from stack exchange
+  validateEmail = (email) => {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  validate = (state) =>{
+
+    return {
+      'name': state.name.length == 0,
+      'email': state.email.length == 0 || !this.validateEmail(state.email),
+      'message': state.message.length == 0
+    }
+
+  }
+  handleBlur = (field) => (event) =>{
+    this.setState({
+      touched: { ...this.state.touched, [field]: true}
+    });
   }
 
   nameChange = (event) =>{
@@ -31,28 +56,40 @@ class ContactForm extends Component {
     this.setState({ message: event.target.value });
   }
 
-  sendEmail = async () => {
+  canSubmit(){
+    const errors = this.validate(this.state);
+    const submitDisabled = Object.keys(errors).some( x => errors[x]);
+    return !submitDisabled;
+  }
 
-    fetch('https://immense-hollows-28003.herokuapp.com/mail', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message
-      })
-    }).then( resp =>{
-      console.log("email request complete", resp.status);
+  handleSubmit = async () => {
+    if (!this.canSubmit()) {
+      return;
+    }
+
+    this.props.sendEmail(this.state.name + ' ' + this.state.email, this.state.message)
+      .then(resp => {
+      
+
     })
-    this.setState({emailSent: true});
-    // Preview only available when sending through an Ethereal account
+      
+
   }
 
 
+
   render() {
+
+    const errors = this.validate(this.state);
+    const submitDisabled = Object.keys(errors).some( x => errors[x]);
+
+    const showError = (input) => {
+      const hasError = errors[input];
+      const shouldShow = this.state.touched[input];
+
+      return hasError ? shouldShow : false;
+    }
+
     if(this.state.emailSent){
       return(
         <div className="mt5 ">
@@ -61,52 +98,55 @@ class ContactForm extends Component {
       )
     }else{
       return (
+        <>
+          <div className="disabled-overlay"><h1>Sorry, the contact form is currently disabled.</h1></div>
         <form className="contactform flex flex-column items-center col-center h-100 mt5">
           <div className='flex row contactform__dynamic-row'>
             <TypeText typedText={['Questions?', 'Just Saying Hi?', 'Work Together?', 'New Project Idea?']}/>
           </div>
           <div className='flex flex-column col-center'>
-          <div className='flex row row-center justify-center contactform__header'>
-            <span className='block--sl '>Contact</span>
+            <div className='flex row row-center justify-center contactform__header'>
+              <span className='block--sl '>Contact</span>
+            </div>
+            <div className={(showError('name')? "input--red":"") +" flex row col-center input contactform__name-input"}>
+              <img src={userIcon}/>
+              <input
+                className='ms text-input' 
+                type="text"
+                value={this.state.name}
+                onChange={this.nameChange}
+                placeholder="Name"
+                onBlur={this.handleBlur('name')}
+              />
+            </div>
+            <div className={(showError('email')? "input--red":"") + " flex row col-center input contactform__email-input"}>
+              <img src={emailIcon}/>
+              <input
+                className='ms text-input' 
+                type="text"
+                value={this.state.email}
+                onChange={this.emailChange}
+                placeholder='Email'
+                onBlur={this.handleBlur('email')}
+              />
+            </div>
+            <div className={(showError('message')? "input--red":"") + " flex row flex-start input contactform__message-input"}>
+              <img src={messageIcon}/>
+              <textarea
+                className='ms text-input'
+                value={this.state.message}
+                onChange={this.messageChange}
+                placeholder='Your Message'
+                onBlur={this.handleBlur('message')}
+                />
+            </div>
           </div>
-          <div className="flex row col-center input contactform__name-input">
-            <img src={userIcon}/>
-            <input
-              className='ms text-input' 
-              type="text"
-              value={this.state.name}
-              onChange={this.nameChange}
-              placeholder={this.state.nameDefault}
-            />
+          <div className={( submitDisabled? 'div--disabled':'') + ' flex items-center pt4 f2'}>
+            <Abutton text='Submit' callback={this.handleSubmit}/>
           </div>
-          <div className="flex row col-center input  contactform__email-input">
-            <img src={emailIcon}/>
-            <input
-              className='ms text-input' 
-              type="text"
-              value={this.state.email}
-              onChange={this.emailChange}
-              placeholder={this.state.emailDefault}
-            />
-          </div>
-          <div className="flex row flex-start input contactform__message-input">
-            <img src={messageIcon}/>
-            <textarea
-              className='ms text-input'
-              value={this.state.message}
-              onChange={this.messageChange}
-              placeholder={this.state.messageDefault}/>
-          </div>
-          
-  
-          </div>
-          <div className='flex items-center pt4 f2'>
-            <Abutton text='Submit' callback={this.sendEmail}/>
-          </div>
-         
-        </form>
+          </form>
+          </>
       );
-
     }
   }
 
